@@ -11,12 +11,24 @@ class BankAccount:
         return random.randint(10000000, 99999999)
     
     def deposit(self, amount):
+        #add deposit to amount
         self.balance += amount
         print(f"Amount deposited: ${amount:.2f} new balance: ${self.balance:.2f}")
+
+    def withdraw(self, amount):
+        #withdraw from amount
+        self.balance -= amount
+        if self.balance <= 0:
+            print("Insufficient Funds")
+            self.balance -= 10 #overdarft fee
+        else:
+            print(f"Amount withdrawn: ${amount:.2f}, new balance: ${self.balance:.2f}")
+
     
 
 account = BankAccount(full_name="David Doherty")
 account.deposit(500.32)
+account.withdraw(600)
 print(f"Account Owner: {account.full_name}")
 print(f"Account Number: {account.account_number}")
 print(f"Accoount Balance: ${account.balance}")
