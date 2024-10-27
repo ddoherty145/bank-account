@@ -33,11 +33,17 @@ class BankAccount:
         self.balance += interest
         print(f"Interest added: ${interest:.2f} New Balance: ${self.balance:.2f}")
 
+    def print_statement(self):
+        print(f"Account Statement\nOwner: {self.full_name}\nAccount Number: {self.account_number}\nBalance: ${self.balance:.2f}")
+
     
 
 account = BankAccount(full_name="David Doherty")
 account.deposit(500.32)
-account.withdraw(600)
-print(f"Account Owner: {account.full_name}")
-print(f"Account Number: {account.account_number}")
-print(f"Accoount Balance: ${account.balance}")
+# account.withdraw()
+account.get_balance()
+account.add_interest()
+account.print_statement()
+# print(f"Account Owner: {account.full_name}")
+# print(f"Account Number: {account.account_number}")
+# print(f"Accoount Balance: ${account.balance}")
