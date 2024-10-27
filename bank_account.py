@@ -19,10 +19,19 @@ class BankAccount:
         #withdraw from amount
         self.balance -= amount
         if self.balance <= 0:
-            print("Insufficient Funds")
+            print("Insufficient Funds.")
             self.balance -= 10 #overdarft fee
         else:
             print(f"Amount withdrawn: ${amount:.2f}, new balance: ${self.balance:.2f}")
+
+    def get_balance(self):
+        print(f"Current Balance: ${self.balance:.2f}")
+        return self.balance
+    
+    def add_interest(self):
+        interest = self.balance * 0.00083
+        self.balance += interest
+        print(f"Interest added: ${interest:.2f} New Balance: ${self.balance:.2f}")
 
     
 
