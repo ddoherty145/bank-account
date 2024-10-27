@@ -61,3 +61,17 @@ tiffany_account.print_statement()
 
 kae_account.deposit(60000)
 kae_account.get_balance()
+
+#added mitchell's account
+mitchell_account = BankAccount(full_name="Mitchell")
+# mitchell_account.account_number = 3141592
+mitchell_account.account_number = "{:08d}".format(3141592)
+
+mitchell_account.deposit(400000)
+mitchell_account.print_statement()
+
+mitchell_account.add_interest()
+mitchell_account.print_statement()
+
+mitchell_account.withdraw(150)
+mitchell_account.print_statement()
