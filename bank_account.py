@@ -29,7 +29,7 @@ class BankAccount:
         return self.balance
     
     def add_interest(self):
-        interest = self.balance * 0.00083
+        interest = self.balance * 0.00083 #interest added
         self.balance += interest
         print(f"Interest added: ${interest:.2f} New Balance: ${self.balance:.2f}")
 
@@ -38,12 +38,26 @@ class BankAccount:
 
     
 
-account = BankAccount(full_name="David Doherty")
-account.deposit(500.32)
+# account = BankAccount(full_name="David Doherty")
+# account.deposit(500.32)
 # account.withdraw()
-account.get_balance()
-account.add_interest()
-account.print_statement()
+# account.get_balance()
+# account.add_interest()
+# account.print_statement()
 # print(f"Account Owner: {account.full_name}")
 # print(f"Account Number: {account.account_number}")
 # print(f"Accoount Balance: ${account.balance}")
+
+david_account = BankAccount(full_name="David")
+tiffany_account = BankAccount(full_name="Tiffany")
+kae_account = BankAccount(full_name="Kae")
+
+david_account.deposit(40000)
+david_account.withdraw(1000)
+
+tiffany_account.deposit(50000)
+tiffany_account.add_interest()
+tiffany_account.print_statement()
+
+kae_account.deposit(60000)
+kae_account.get_balance()
