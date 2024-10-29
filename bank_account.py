@@ -75,3 +75,11 @@ mitchell_account.print_statement()
 
 mitchell_account.withdraw(150)
 mitchell_account.print_statement()
+
+bank = [david_account, tiffany_account, kae_account, mitchell_account]
+
+def apply_interest_to_all(accounts):
+    for account in accounts:
+        account.add_interest()
+
+apply_interest_to_all(bank)
